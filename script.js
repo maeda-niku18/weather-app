@@ -104,13 +104,13 @@ function getAdvice(data) {
 }
 
 function showHourlyWeather(times, temps, codes, probs) {
-    const hourly = document.getElementById('hourly');
-    hourly.innerHTML = '';
+    const today = document.getElementById('hourly-today');
+    const tomorrow = document.getElementById('hourly-tomorrow');
+    today.innerHTML = '';
+    tomorrow.innerHTML = '';
     const now = new Date();
 
-    function makeContainer(start, end) {
-        const container = document.createElement('div');
-        container.className = 'hourly-scroll';
+    function fill(container, start, end) {
         for (let i = start; i < end; i++) {
             const item = document.createElement('div');
             item.className = 'hour-item';
@@ -124,11 +124,10 @@ function showHourlyWeather(times, temps, codes, probs) {
             if (t < now) item.classList.add('past');
             container.appendChild(item);
         }
-        return container;
     }
 
-    hourly.appendChild(makeContainer(0, 24));
-    hourly.appendChild(makeContainer(24, 48));
+    fill(today, 0, 24);
+    fill(tomorrow, 24, 48);
 }
 
 function showTomorrowWeather(codeMorning, codeNoon, max, min) {

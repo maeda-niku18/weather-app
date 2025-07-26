@@ -8,25 +8,33 @@
 </head>
 <body>
     <div id="app">
-        <h1 id="location">気象と幻想のスタイリスト</h1>
+        <h1 id="location">位置</h1>
         <button id="locateBtn">現在地の天気を取得</button>
+
+        <h2 id="today-title">今日の天気</h2>
         <div id="weather">
             <div id="weather-morning" class="weather-item"></div>
             <div id="weather-afternoon" class="weather-item"></div>
             <div id="highlow"></div>
         </div>
+
+        <div id="hourly-today-section" class="hourly-section">
+            <h3>1時間毎の今日の天気</h3>
+            <div id="hourly-today" class="hourly-scroll"></div>
+        </div>
+
         <h2 id="tomorrow-title">明日の天気</h2>
         <div id="weather-tomorrow">
             <div id="tomorrow-morning" class="weather-item"></div>
             <div id="tomorrow-afternoon" class="weather-item"></div>
             <div id="tomorrow-highlow"></div>
         </div>
-        <div id="hourly">
-            <h3>今日の時間ごとの気温</h3>
-            <div id="hourly-today" class="hourly-scroll"></div>
-            <h3>明日の時間ごとの気温</h3>
+
+        <div id="hourly-tomorrow-section" class="hourly-section">
+            <h3>1時間毎の明日の天気</h3>
             <div id="hourly-tomorrow" class="hourly-scroll"></div>
         </div>
+
         <section id="clothing"></section>
         <section id="advice"></section>
         <section id="lucky"></section>
