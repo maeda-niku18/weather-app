@@ -72,16 +72,16 @@ button:hover {
     font-size: 1.2rem;
 }
 
-#hourly {
+.hourly-section {
     margin-top: 20px;
     overflow-x: auto;
 }
 
-#hourly .hourly-scroll {
+.hourly-scroll {
     display: flex;
 }
 
-#hourly .hour-item {
+.hourly-scroll .hour-item {
     flex: 0 0 auto;
     width: 70px;
     border: 1px solid #ccc;
@@ -92,15 +92,15 @@ button:hover {
     text-align: center;
 }
 
-#hourly .hour-item.past {
+.hourly-scroll .hour-item.past {
     opacity: 0.5;
 }
 
-#hourly .hour-icon {
+.hourly-scroll .hour-icon {
     font-size: 1.2rem;
 }
 
-#hourly .hour-temp {
+.hourly-scroll .hour-temp {
     margin: 2px 0;
 }
 
